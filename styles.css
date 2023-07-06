@@ -1,0 +1,242 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.bg-home {
+    background-image: url(Images/Home/Imagen-copa-tarde.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header {
+    height: 3em;
+    background-color: transparent;
+    margin: 1rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamb-icon {
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 1rem;
+    background: transparent;
+}
+
+.logo {
+    width: 9rem;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar.active{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: grey;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 20%;
+    right: 0;
+    transition: all 1s;
+}
+
+.navbar.active a {
+    color: white;
+}
+
+.close-btn {
+    display: flex;
+    width: fit-content;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+
+/* MAIN */
+main {
+    padding: 0rem 0 6rem 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heading {
+    width: 100vw;
+    padding-top: 3rem;
+    color: whitesmoke;
+}
+
+.heading h1 {
+    width: 50%;
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+.heading h3 {
+    padding: 2rem 0 3rem 1rem;
+    font-size: 2rem;
+}
+
+.main-container article {
+    color: white;
+    font-size: 1.2rem;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.0625rem;
+    letter-spacing: -0.0075rem;
+    padding: 5rem 1rem 0 1rem;
+}
+
+.date-place {
+    padding: 0 1rem 0 1rem;
+}
+
+/* MAIN PROGRAM */
+
+.main-program {
+    background-color: rgb(16 7 33);
+}
+
+.mp-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+.mp-container h2 {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(141 37 50);
+}
+
+.program-list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.program-item {
+    display: flex;
+    background-color: #3B3E45;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.act-title {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.act-title i {
+    font-size: 2rem;
+    color: white;
+}
+
+.program-item p {
+    width: 60%;
+}
+
+.join-btn {
+    color: white;
+    width: 100%;
+    margin: 1rem;
+    background-color:rgb(59 10 39);
+    padding: 1.5rem;
+}
+
+/* Bodegas */
+
+.card {
+    display: flex;
+    width: 100vw;
+    font-size: 1rem;
+}
+
+.bod-img {
+    width: 11rem;
+    height: 11rem;
+    padding: 1.2rem;
+}
+
+.w-cerrars h3 {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+
+.w-cerrars p {
+    font-size: 0.9rem;
+}
+
+.sponsor {
+    background-color: #414246;
+    color: white;
+}
+
+.sponsor h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.sponsor-list {
+    display: flex;
+    padding: 3rem;
+    width: 100vw;
+}
+
+.sponsor-list img {
+    width: 80%;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (min-width: 768px){
+    .bg-home {
+        background-image: url(Images/Home/pexels-alexey-komissarov-9021580.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -5%;
+    }
+}
