@@ -39,7 +39,7 @@ let data = [
     }
   ];
   
-  const topicContainer = document.querySelector('.w-cerrars .container');
+  const topicContainer = document.querySelector('.w-cellars .container');
   
   data.forEach(e => {
 
