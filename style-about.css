@@ -1,0 +1,261 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-size: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADER */
+/* .bg-home {
+    background-image: url(Images/Home/Imagen-copa-tarde.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+header {
+    height: 3em;
+    background-color: transparent;
+    margin: 1rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamb-icon {
+    color: black;
+    font-size: 2rem;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    background: transparent;
+}
+
+.logo {
+    width: 9rem;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar.active{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    /* background-color: grey; */
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 20%;
+    right: 0;
+    transition: all 1s;
+    box-shadow: -3px 1px grey inset;
+
+    &:hover {
+        background-color: rgb(16 7 33);
+        box-shadow: -3px 50rem grey inset;
+    }
+    
+}
+
+.navbar.active a {
+    color:rgb(131, 30, 42);
+    font-weight: 600;
+    transition: all 1s;
+    &:hover {
+        color: whitesmoke
+    }
+}
+
+.close-btn {
+    display: flex;
+    width: fit-content;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color:rgb(131, 30, 42);
+    transition: all 1s;
+    &:hover {
+        color: whitesmoke
+    }
+}
+
+/* Main */
+
+.main-container {
+    padding: 2rem 1rem 3rem 1rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+}
+
+.heading h3 {
+    font-size: 1.5rem;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    align-self: center;
+}
+
+.main-container article {
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.leyend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.leyend img {
+    width:80vw;
+}
+
+.serenata {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.last-serenatas {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card {
+    width: 100%;
+    height: 15rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card h3 {
+    position: relative;
+}
+
+.card h4 {
+    position: relative;
+}
+
+.card-1 {
+    background-color: rgb(131, 30, 42);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background-image: url(Images/About/cahqueño.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+}
+
+.card-2 {
+    background-color: rgb(131, 30, 42);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background-image: url(Images/About/ballet\ folklorico.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+    }
+    
+}
+
+
+
+
+
+
+
+/* Sponsor */
+
+.sponsor {
+    background-color: #414246;
+    color: white;
+    padding: 1.5rem;
+}
+
+.sponsor h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.sponsor-list {
+    display: flex;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sponsor-list img {
+    width: 20vw;
+    filter: invert(50%);
+}
+
+/* Footer */
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
