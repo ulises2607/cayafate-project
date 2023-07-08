@@ -63,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Cooming soon
+[Click Here](https://ulises2607.github.io/cayafate-project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,11 +116,10 @@ To run tests, run the following command:
 ```sh
   npx eslint .  
 ```
---->
 
 ### Deployment
 
-- Cooming soon
+#### If you want to deploy the website you can use the free webportals or platforms for deloyment. Like `gh-pages`, `vercel`, `netlify`and so many other free platforms. This website is deploye using `gh-pages`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
