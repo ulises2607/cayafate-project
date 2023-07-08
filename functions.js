@@ -10,8 +10,6 @@ closeButton.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
 
-
-
 // var mediaquery = window.matchMedia('(min-width: 769px');
 // let actButton = document.querySelector('.act-btn');
 // if(mediaquery.matches) {
