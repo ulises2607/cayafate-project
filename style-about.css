@@ -16,14 +16,6 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-/* HEADER */
-/* .bg-home {
-    background-image: url(Images/Home/Imagen-copa-tarde.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
 header {
     height: 3em;
     background-color: transparent;
@@ -37,13 +29,17 @@ header {
     justify-content: space-between;
 }
 
+.top-bar {
+    display: none;
+}
+
 .hamb-icon {
-    color: black;
+    color: brown;
     font-size: 2rem;
     border: none;
     padding: 1rem;
-    cursor: pointer;
     background: transparent;
+    cursor: pointer;
 }
 
 .logo {
@@ -59,25 +55,24 @@ header {
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
-    /* background-color: grey; */
     font-size: 2rem;
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 20%;
+    bottom: 0;
     right: 0;
     transition: all 1s;
     box-shadow: -3px 1px grey inset;
 
     &:hover {
         background-color: rgb(16 7 33);
-        box-shadow: -3px 50rem grey inset;
+        box-shadow: -3px 100rem rgba(0, 0, 0, 0.2) inset;
     }
     
 }
 
 .navbar.active a {
-    color:rgb(131, 30, 42);
+    color:rgb(71, 18, 18);;
     font-weight: 600;
     transition: all 1s;
     &:hover {
@@ -85,10 +80,17 @@ header {
     }
 }
 
+.sea-event {
+    border: 2px solid red;
+    padding: 0.5rem;
+    color: red;
+}
+
 .close-btn {
     display: flex;
     width: fit-content;
     align-self: flex-end;
+    padding-right: 10vw;
     background-color: transparent;
     border: none;
     font-size: 2rem;
@@ -98,28 +100,43 @@ header {
     &:hover {
         color: whitesmoke
     }
+
 }
 
 /* Main */
 
-.main-container {
+.bg-home {
+    background-image: url(Images/About/whitebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
     padding: 2rem 1rem 3rem 1rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heading {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 3rem;
 }
 
 .heading h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: rgb(255, 102, 0);
 }
 
 .heading h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     align-self: center;
+    color: brown;
 }
 
 .main-container article {
@@ -132,6 +149,9 @@ header {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    color: #7A7A7A;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    background-color: rgb(247, 247, 247);
 }
 
 .leyend {
@@ -224,12 +244,15 @@ header {
 /* Sponsor */
 
 .sponsor {
-    background-color: #414246;
-    color: white;
-    padding: 1.5rem;
+    background-image: url(Images/Home/Partners/bg-partners.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: brown;
+    padding: 2rem;
 }
 
 .sponsor h2 {
+    width: 100%;
     display: flex;
     justify-content: center;
     font-size: 3rem;
@@ -237,12 +260,11 @@ header {
 
 .sponsor-list {
     display: flex;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-left: 0.5rem;
+    padding: 1rem;
     width: 100vw;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .sponsor-list img {
@@ -259,3 +281,138 @@ header {
     padding: 2rem;
 }
 
+
+@media (min-width: 768px){
+
+    body {
+        width: 100vw;
+        
+    }
+
+    .hamb-icon,
+    .close-btn {
+        display: none;
+    }
+
+    .header {
+        width: 100vw;
+    }
+
+    .top-bar {
+        display: block;
+        background-color: #3B3E45;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .top-bar-list {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.1rem;
+        padding-right: 10rem;
+    }
+
+    .top-bar a {
+        color: white;
+    }
+
+    .menu {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        width: 100vw;
+        height: 6rem;
+        align-items: center;
+        padding-top: 2rem;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .nav-item a {
+        color: rgb(71, 18, 18);
+        font-size: 1rem;
+    }
+
+    /* Main */
+
+    .main-container {
+        padding: 3rem 18% 2rem 18%;
+    }
+
+    .heading {
+        width: 100vw;
+        padding: 3rem;
+        /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)),url(Images/About/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -5%; */
+    }
+
+    .heading h3 {
+        display: none;
+    }
+
+    .main-container article{
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem
+    }
+
+    .contact {
+        background-color: transparent;
+    }
+
+    /* Legend */
+
+    .about {
+        padding: 3rem 18% 2rem 18%;
+    }
+
+    .leyend img {
+        width: 64vw;
+    }
+
+    .about h2, h2 {
+        font-size: 2rem;
+    }
+
+    .last-serenatas {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .sponsor {
+        display: none;
+    }
+
+    footer {
+        background-color: #2C2C2C;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-info {
+        color: white;
+        display: flex;
+        gap: 5rem;
+        font-size: 1.5rem;
+        width: 60rem;
+    }
+
+    .footer-info img {
+        filter: invert(0.9);
+        width: 20rem;
+    }
+}
