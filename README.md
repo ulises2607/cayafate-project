@@ -65,7 +65,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click Here](https://ulises2607.github.io/cayafate-project/)
+- [Click Here](https://ulises2607.github.io/cayafate-project/) for a preview.
+- You can watch the [video](https://www.loom.com/share/0c31a4b830b4459191a7647dccba2f66) walkthrough here.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

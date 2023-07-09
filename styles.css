@@ -291,6 +291,7 @@ main {
     0 0 brown inset,
     -0 0 brown inset;
   border: 3px brown solid;
+  cursor: pointer;
 
   &:hover {
     box-shadow:
@@ -371,7 +372,7 @@ main {
 }
 
 .sponsor-list img {
-  width: 8rem;
+  width: 6rem;
   filter: invert(50%);
 }
 
@@ -513,9 +514,16 @@ footer {
   }
 
   .date-place {
-    font-size: 2.5vw;
     padding: 3rem 0 2rem 0;
     margin: 0;
+  }
+
+  .date-place h2 {
+    font-size: 2rem;
+  }
+
+  .date-place p {
+    font-size: 1.2rem;
   }
 
   /* Activities */
@@ -582,6 +590,10 @@ footer {
   .sponsor h2 {
     font-size: 2rem;
     color: grey;
+  }
+
+  .sponsor-list img {
+    width: 10rem;
   }
 
   footer {
