@@ -2,8 +2,10 @@
 
 <div align="center">
   
-
-  <h3><b>Portfolio</b></h3>
+  <br>
+  <h1><b>Cafayate Tourism</b></h1>
+  <br>
+  
 
 </div>
 
@@ -33,7 +35,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio] <a name="about-project"></a>
+# 📖 [Cafayate Tourism] <a name="about-project"></a>
 
 
 
@@ -173,7 +175,7 @@ If you like this project please comment on what you liked about it, and what I c
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank microverse and my code reviewers team for provide me the tools to make this project
+For Design Inspiration I whould like to Acknowledge [Cyndy Shin](https://www.behance.net/adagio07)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

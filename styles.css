@@ -8,37 +8,46 @@
   list-style: none;
 }
 
+
 /* Variables */
 root {
   --color-shadow: rgb(59 10 39);
 }
 
 body {
-  font-size: 100%;
+  width: 100vw;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
   font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  line-height: 1.4;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* HEADER */
-.bg-home {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url(Images/Home/Imagen-copa-tarde.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.guide_bar {
+  width: 53px;
+  height: 16px;
+  border-bottom: 2px solid #ef513c;
+  margin: 0 auto 54px;
 }
 
 header {
-  height: 3em;
-  background-color: transparent;
-  margin: 1rem;
+  height: 4em;
+  background-color: whitesmoke;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .top-bar {
@@ -46,7 +55,8 @@ header {
 }
 
 .hamb-icon {
-  color: brown;
+  display: flex;
+  color: #535353;
   font-size: 2rem;
   border: none;
   padding: 1rem;
@@ -69,17 +79,20 @@ header {
   gap: 1rem;
   font-size: 2rem;
   position: fixed;
+  width: 80%;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 500;
   transition: all 1s;
   box-shadow: -3px 1px grey inset;
 
   &:hover {
-    background-color: rgb(16 7 33);
     box-shadow: -3px 100rem rgba(0, 0, 0, 0.2) inset;
   }
+
+  background-color: white;
 }
 
 .navbar.active a {
@@ -92,10 +105,15 @@ header {
   }
 }
 
-.sea-event {
-  border: 2px solid red;
-  padding: 0.5rem;
-  color: red;
+.navbar.active .nav-item .sea-event {
+  color: #f34f19;
+  font-weight: 600;
+  border: 3px solid #f34f19;
+  cursor: pointer;
+
+  &:hover {
+    color: whitesmoke;
+  }
 }
 
 .close-btn {
@@ -118,13 +136,15 @@ header {
 /* MAIN */
 main {
   width: 100%;
-  padding: 0 0 6vw 1vw;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-image: url(Images/Home/mobile_intro_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .heading {
@@ -135,8 +155,10 @@ main {
 
 .heading h1 {
   width: 100%;
-  font-size: 5rem;
-  padding: 0 0 2rem 1rem;
+  font-size: 18vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 1rem;
   background-image: url(Images/Home/pexels-austin-sullivan-13400034.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,37 +173,45 @@ main {
   width: 100%;
   padding: 4rem 0 0 1rem;
   font-size: 5vw;
-  color: brown;
+  color: #f34f19;
 }
 
 .main-container article {
-  color: brown;
-  font-size: 1rem;
+  color: #333;
+  font-size: 1.1rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6rem;
   letter-spacing: 0.0075rem;
   padding: 2rem 1rem 2rem 1rem;
   margin: 0 1rem 0 1rem;
-  border: 3px solid rgb(131, 30, 42);
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
   -webkit-text-stroke: 0.1px black;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #f7f7f8;
+  border: 2px solid white;
 }
 
 .par-date {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: end;
   gap: 2rem;
 }
 
 .date-place {
+  display: inline-block;
   padding: 1rem 1rem 3rem 1rem;
   color: rgb(71, 18, 18);
+  text-align: center;
+}
+
+.date-place h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Activities */
@@ -193,16 +223,14 @@ main {
 }
 
 .mp-container {
-  color: brown;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding-bottom: 2.5rem;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .mp-container h2 {
-  padding: 1rem;
   font-size: 2.5rem;
 }
 
@@ -218,19 +246,19 @@ main {
   background-image: url(Images/Home/Activities/act-cards.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0.2rem;
   gap: 1rem;
 }
 
 .act-title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 40%;
   gap: 1rem;
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: brown;
+  color: #ef513c;
 }
 
 .act-title i {
@@ -246,27 +274,30 @@ main {
 .program-item p {
   color: #fff;
   width: 60%;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  text-align: left;
+  word-break: keep-all;
 }
 
 .act-btn {
-  color: brown;
+  color: whitesmoke;
   width: 80%;
   margin: 1rem;
-  background-color: #3b3e45;
+  background-color: #ef513c;
   padding: 1.5rem;
   font-size: 1.5rem;
   transition: all 1s;
   box-shadow:
     0 0 brown inset,
-    -0 0 rgb(59 10 39) inset;
+    -0 0 brown inset;
   border: 3px brown solid;
 
   &:hover {
     box-shadow:
-      40rem 0 rgb(59 10 39) inset,
+      40rem 0 brown inset,
       -40rem 0 brown inset;
-    color: whitesmoke;
+    color: white;
   }
 }
 
@@ -276,6 +307,7 @@ main {
   background-image: url(Images/Home/SL_042620_30310_19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 2rem;
 }
 
 .card {
@@ -287,8 +319,8 @@ main {
 }
 
 .bod-img {
-  width: 10rem;
-  height: 10rem;
+  width: 11rem;
+  height: 11rem;
   padding: 1rem;
 }
 
@@ -296,8 +328,7 @@ main {
   color: #3b3e45;
   display: flex;
   justify-content: center;
-  padding: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .w-cellars h3 {
@@ -306,7 +337,7 @@ main {
 }
 
 .legend {
-  color: red;
+  color: #ef513ced;
   font-size: 0.7rem;
 }
 
@@ -320,15 +351,15 @@ main {
   background-image: url(Images/Home/Partners/bg-partners.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: brown;
-  padding: 2rem;
+  color: grey;
+  padding: 0 2 2 2;
 }
 
 .sponsor h2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .sponsor-list {
@@ -341,17 +372,21 @@ main {
 }
 
 .sponsor-list img {
-  width: 20vw;
+  width: 8rem;
   filter: invert(50%);
 }
 
 /* Footer */
+footer {
+  background-color: #f2f2f2;
+}
 
 .footer-info {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  min-height: 15rem;
 }
 
 @media (min-width: 768px) {
@@ -406,7 +441,10 @@ main {
     width: 100%;
     height: 6rem;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    vertical-align: middle;
+    background-color: #f7f7f8;
   }
 
   .navbar {
@@ -415,9 +453,22 @@ main {
   }
 
   .nav-item a {
-    color: rgb(71, 18, 18);
+    color: #888;
     font-size: 1rem;
+    transition: all 1s;
+
+    &:hover {
+      color: #f34f19;
+    }
   }
+
+  .nav-item .sea-event {
+    color: #f34f19;
+    font-weight: 600;
+    border: 3px solid #f34f19;
+  }
+
+
 
   /* MAIN */
 
@@ -433,6 +484,9 @@ main {
     justify-content: center;
     padding-left: 8%;
     padding-right: 20%;
+    background-image: url(Images/Home/main_big.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .heading {
@@ -441,20 +495,24 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: start;
+    padding-top: 10rem;
   }
 
   .heading h1 {
-    font-size: 13vw;
+    font-size: 5rem;
     padding-bottom: 5%;
   }
 
   .heading h3 {
     padding: 0;
     padding-left: 1rem;
+    font-weight: 400;
+    font-size: 2rem;
   }
 
   .par-date article {
     padding: 1.5rem;
+    background-color: #f7f7f8;
   }
 
   .date-place {
@@ -469,8 +527,17 @@ main {
     padding: 4rem 13rem 3rem 13rem;
   }
 
+  .mp-container h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
   .program-list {
     flex-direction: row;
+  }
+
+  .act-title {
+    flex-direction: column;
   }
 
   .program-item {
@@ -484,7 +551,21 @@ main {
     text-align: center;
   }
 
+  .act-btn {
+    width: fit-content;
+    background: transparent;
+    text-transform: uppercase;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid white;
+  }
+
   /* Wine cellar */
+
+  .w-cellars {
+    padding-top: 0;
+  }
 
   .wc-container {
     display: grid;
@@ -499,6 +580,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .sponsor h2 {
+    font-size: 2rem;
+    color: grey;
+  }
+
+  footer {
+    background-color: #f2f2f2;
   }
 }
 
