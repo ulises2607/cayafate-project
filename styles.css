@@ -8,7 +8,6 @@
   list-style: none;
 }
 
-
 /* Variables */
 root {
   --color-shadow: rgb(59 10 39);
@@ -467,8 +466,6 @@ footer {
     font-weight: 600;
     border: 3px solid #f34f19;
   }
-
-
 
   /* MAIN */
 
